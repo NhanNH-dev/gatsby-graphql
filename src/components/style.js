@@ -53,11 +53,11 @@ export const NavItem = styled.li`
       }
     }
   }
-
-  &.is-current {
-    a > p {
-      /* color: ${props => props.theme.color.primary}; */
-      color: red;
+  a.is-current {
+    p {
+      background: green;
+      font-size: 20px;
+      color: red !important;
     }
   }
 `

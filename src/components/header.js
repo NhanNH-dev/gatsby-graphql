@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { NavItem, Title, Text, UL } from "./style"
+
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      site {
+      site {w
         siteMetadata {
           title
         }
@@ -12,7 +13,7 @@ const Header = () => {
     }
   `)
   const isActive = ({ isCurrent }) => {
-    return isCurrent ? { className: "active" } : {}
+    return isCurrent ? { className: "is-current" } : {}
   }
   return (
     <>
