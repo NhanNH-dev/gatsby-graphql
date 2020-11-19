@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import * as Styles from "./style"
+import { NavItem, Title, Text, UL } from "./style"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -11,56 +11,39 @@ const Header = () => {
       }
     }
   `)
+  const isActive = ({ isCurrent }) => {
+    return isCurrent ? { className: "active" } : {}
+  }
   return (
     <>
       <h1>
         <Link style={{ textDecoration: "none" }} to="/">
-          <Styles.Title>{data.site.siteMetadata.title}</Styles.Title>
+          <Title>{data.site.siteMetadata.title}</Title>
         </Link>
       </h1>
       <nav>
-        <Styles.UL>
-          <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              activeClassName="active"
-              activeStyle={{ color: "red" }}
-              to="/"
-            >
-              <Styles.LI>Home</Styles.LI>
+        <UL>
+          <NavItem>
+            <Link getProps={isActive} to="/">
+              <Text upper>Home</Text>
             </Link>
-          </li>
-          <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              activeClassName="active"
-              activeStyle={{ color: "red" }}
-              to="/blog"
-            >
-              <Styles.LI>Blog</Styles.LI>
+          </NavItem>
+          <NavItem>
+            <Link to="/blog" getProps={isActive}>
+              <Text upper>Blog</Text>
             </Link>
-          </li>
-          <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              activeClassName="active"
-              activeStyle={{ color: "blue" }}
-              to="/about"
-            >
-              <Styles.LI>About</Styles.LI>
+          </NavItem>
+          <NavItem>
+            <Link to="/about" getProps={isActive}>
+              <Text upper>About</Text>
             </Link>
-          </li>
-          <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              activeClassName="active"
-              activeStyle={{ color: "red" }}
-              to="/contact"
-            >
-              <Styles.LI>Contact</Styles.LI>
+          </NavItem>
+          <NavItem>
+            <Link to="/contact" getProps={isActive}>
+              <Text upper>Contact</Text>
             </Link>
-          </li>
-        </Styles.UL>
+          </NavItem>
+        </UL>
       </nav>
     </>
   )
