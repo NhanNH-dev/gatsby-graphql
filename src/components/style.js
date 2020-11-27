@@ -55,9 +55,7 @@ export const NavItem = styled.li`
   }
   a.is-current {
     p {
-      background: green;
-      font-size: 20px;
-      color: red !important;
+      border-bottom: 3px solid ${props => props.theme.color.secondary}
     }
   }
 `

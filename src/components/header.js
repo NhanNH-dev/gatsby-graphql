@@ -5,7 +5,7 @@ import { NavItem, Title, Text, UL } from "./style"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      site {w
+      site {
         siteMetadata {
           title
         }

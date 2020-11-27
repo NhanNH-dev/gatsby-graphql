@@ -12,7 +12,7 @@ const Footer = () => {
   `)
   return (
     <footer style={{ height: "50vh" }}>
-      <p id="footer" style={{ paddingBottom: "100vh" }}>
+      <p id="footer">
         Created by {site.siteMetadata.author}, © 2019
       </p>
     </footer>

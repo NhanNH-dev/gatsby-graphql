@@ -10,7 +10,7 @@ export const H1 = styled.h1`
   color: ${props => props.theme.color.tertiary};
   span {
     @media (max-width: ${props => props.theme.screen.md}) {
-      color: green
+      color: green;
     }
   }
 
@@ -19,7 +19,6 @@ export const H1 = styled.h1`
     `
     display: block;
     color: red;
-
     @media (max-width: ${props.theme.screen.sm}) {
       display: none;
     }

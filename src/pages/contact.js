@@ -1,5 +1,4 @@
 import React from "react"
-
 import Layout from "../components/layout"
 
 const ContactPage = () => {
@@ -10,7 +9,7 @@ const ContactPage = () => {
         The best way to reach me is via{" "}
         <a href="https://twitter.com/@andrew_j_mead" rel="noreferrer" target="_blank">
           @andrew_j_mead
-        </a>{" "}
+        </a>
         on Twitter!
       </p>
     </Layout>
