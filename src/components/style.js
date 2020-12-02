@@ -18,7 +18,7 @@ export const Header = styled.header`
 `
 export const Title = styled.span`
   color: black;
-  font-size: 3rem;
+  font-size: 1.5rem;
 `
 export const UL = styled.ul`
   display: flex;
@@ -55,7 +55,8 @@ export const NavItem = styled.li`
   }
   a.is-current {
     p {
-      border-bottom: 3px solid ${props => props.theme.color.secondary}
+      display: inline;
+      border-bottom: 3px solid ${props => props.theme.color.secondary};
     }
   }
 `

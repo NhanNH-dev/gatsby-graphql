@@ -2,6 +2,7 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 
 import * as Styles from "./style.js"
+import "../styles/bootstrap.min.css"
 import Header from "./header"
 import Footer from "./footer"
 import theme from "../styles/theme"
